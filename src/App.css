@@ -1,38 +1,389 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&display=swap");
+
+body {
+  font-family: "Inclusive Sans", sans-serif;
+}
+
+.main-img {
+  cursor: pointer;
+}
+
+.nav-item {
+  font-family: "Inclusive Sans", sans-serif;
+  color: black;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.nav-item:hover {
+  color: gray;
+}
+
+.banner {
+  font-family: "Inclusive Sans", sans-serif;
+  height: 800px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70px;
+}
+
+.banner::before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  content: "";
+  background: linear-gradient(to right, black, transparent);
+}
+
+.banner-info {
+  width: 40%;
+  margin-left: 40px;
+  color: white;
+  z-index: 1;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.banner-info h1 {
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+.banner-info p {
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.banner_infos {
+  margin-top: 50px;
+  font-size: 25px;
+}
+
+.banner_infos span {
+  margin-right: 20px;
+}
+
+.slide-menu h1 {
+  padding: 20px;
+}
+
+.movie_adult {
+  font-weight: 700;
+  color: rgb(243, 54, 54);
+}
+
+.loader {
+  position: fixed;
+  height: 150px;
+  width: 150px;
+  top: 50%;
+  left: 50%;
+}
+
+.movie-slide{
+  position: fixed;
+  left:-150px;
+  width: 1450px;
+  height: 200px;
+}
+
+.card-image {
+  border-radius: 7px;
+  overflow: hidden;
+  height: 200px;
+  margin-right: 10px;
+  transition: .5s;
+}
+
+.card-image:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.card:hover .overlay hr {
+  width: 75px;
+  transition-delay: 0.4s;
+}
+
+.icon-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-icon{
+  font-size: 60px;
+}
+
+.title {
+  font-family: "Inclusive Sans", sans-serif;
+  font-weight: 700;
+  color:rgb(243, 54, 54);
+}
+
+.title:first-child {
+  margin-top: 20px;
+}
+
+.overlay {
+  font-family: "Croissant One", cursive;
+  opacity: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.overlay h1 {
+  font-size: 28px;
+  padding-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.card-image:hover .overlay {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.407);
+  width: 100%;
+  height: 100%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.badge {
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie_source {
+  margin-top: 10px;
+}
+
+.movie_source span {
+  margin-right: 10px;
+}
+
+/* 디테일 페이지 */
+.detail_section {
+  padding: 80px 0;
+}
+
+.detail_img_card {
+  display: flex;
+  align-items: center;
+}
+
+.detail-img {
+  width: 600px;
+  height: 900px;
+}
+
+.detail_title {
+  font-size: 70px;
+  font-family: "Croissant One";
+  margin-bottom: 20px;
+}
+
+.detail_tagline {
+  font-family: "Inclusive Sans", sans-serif;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.detail_overview {
+  font-size: 20px;
+  line-height: 2;
+  font-family: "Inclusive Sans", sans-serif;
+  margin-bottom: 20px;
+}
+
+.detail_info {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.detail_info div {
+  margin-right: 30px;
+  font-family: "Inclusive Sans", sans-serif;
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.detail_star {
+  font-size: 30px;
+}
+
+.detail_Users {
+  font-size: 30px;
+}
+
+.detail_info2 {
+  margin: 20px 0;
+}
+
+.detail_info2 div {
+  padding: 20px;
+  font-size: 25px;
+  font-family: "Inclusive Sans", sans-serif;
+}
+
+/* 리뷰컴포넌트 */
+.review-btns {
+  margin-bottom: 40px;
+}
+
+.review-btns button{
+  font-size: 25px;
+  padding: 5px 50px;
+  border-radius: 0;
+}
+
+.review-btn {
+  margin-right: 20px;
+  font-size: 25px;
+  padding: 5px 50px;
+  border-radius: 0;
+  border: 1px solid rgb(243, 54, 54);
+  background-color: transparent;
+  color: rgb(243, 54, 54);
+  transition: .5s;
+}
+
+.review-btn:hover{
+  color: white;
+  background-color: rgb(243, 54, 54);
+}
+
+.related-btn{
+  color: white;
+  background-color: rgb(243, 54, 54);
+  border: none;
+  transition: .5s;
+}
+
+.related-btn:hover{
+  border: 1px solid rgb(243, 54, 54);
+  background-color: transparent;
+  color: rgb(243, 54, 54);
+}
+
+/* 관련 영화 */
+.related-section{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.related-image{
+  background-size: cover;
+  margin: 10px;
+}
+
+/* 영화 페이지 */
+.movie_page{
+  display: flex;
+  justify-content: end;
+}
+
+.movie_btn{
+  font-size: 50px;
+}
+
+.movie-info{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.movies-image{
+  height: 700px;
+  background-position: center;
+  background-size: cover;
+  transition: .5s;
+}
+
+.movies-image:hover{
+  transform: scale(1.1);
+}
+
+.poster-section{
+  position: relative;
+}
+
+.movies-image::before{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(to right, black, transparent);
+}
+
+.movie_page_overlay{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.poster-top{
+  display: flex;
+  margin: 10px;
+  z-index: 1;
+}
+
+.poster-top h1{
+  font-family: "Croissant One";
+  margin-left: 5px;
+  color: white;
+  font-size: 27px;
+}
+
+.poster_small{
+  width: 100px;
+  height: 150px;
+}
+
+.poster-overview{
+  line-height: 30px;
+  font-family: "Inclusive Sans", sans-serif;
+  width: 60%;
+  font-size: 20px;
+  color: white;
+  margin-left: 10px;
+  z-index: 1;
+}
+
+.poster-badge{
+ margin-left: 10px;
+ z-index: 1;
+}
+
+.poster-badge span{
+  font-size: 15px;
+  font-family: "Inclusive Sans", sans-serif;
+  
+}
+
+.poster_source{
+  margin-top: 15px;
+  margin-left: 10px;
+  font-size: 20px;
+  font-family: "Inclusive Sans", sans-serif;
+  z-index: 1;
+}
+
+.poster_source span{
+  color: white;
+}
+
+.poster_source .movie_adult{
+  font-weight: 700;
+  color: rgb(243, 54, 54);
 }
